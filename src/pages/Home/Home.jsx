@@ -1,6 +1,12 @@
 import React from "react";
 import { Layout, Flex } from "antd";
-
+import {
+  BgColorsOutlined,
+  GlobalOutlined,
+  PieChartOutlined,
+  AppstoreOutlined,
+  HomeOutlined,
+} from "@ant-design/icons";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -43,18 +49,55 @@ function Home() {
     <>
       <Flex gap="middle" wrap="wrap">
         <Layout style={layoutStyle}>
-          <Sider width="16%">
+          <Sider width="auto">
             <Sidebar>
               <Menu>
-                <SubMenu label="Charts">
-                  <MenuItem> Pie charts </MenuItem>
-                  <MenuItem> Line charts </MenuItem>
-                </SubMenu>
-                <MenuItem> Documentation </MenuItem>
-                <MenuItem> Calendar </MenuItem>
+                <Menu>
+                  <MenuItem>General</MenuItem>
+                  <MenuItem icon={<HomeOutlined />}> Dashboard</MenuItem>
+
+                  <MenuItem>WIDGETS</MenuItem>
+                  <MenuItem icon={<AppstoreOutlined />}> Widgets</MenuItem>
+
+                  <MenuItem>Elements</MenuItem>
+                  <SubMenu icon={<PieChartOutlined />} label="Components">
+                    <MenuItem> Level 1 Submenu</MenuItem>
+                    <MenuItem> Level 1 Submenu</MenuItem>
+                    <MenuItem> Level 1 Submenu</MenuItem>
+                  </SubMenu>
+                  <SubMenu icon={<GlobalOutlined />} label="Elements">
+                    <MenuItem> Level 1 Submenu</MenuItem>
+                    <MenuItem> Level 1 Submenu</MenuItem>
+                  </SubMenu>
+                  <SubMenu
+                    icon={<BgColorsOutlined />}
+                    label="Advanced Components"
+                  >
+                    <MenuItem> Advanced Components 1</MenuItem>
+                    <MenuItem> Advanced Components 2</MenuItem>
+                  </SubMenu>
+
+                  <MenuItem>Charts & Tables</MenuItem>
+                  <SubMenu icon={<PieChartOutlined />} label="Charts">
+                    <MenuItem> Pie charts</MenuItem>
+                    <MenuItem> Line charts</MenuItem>
+                    <MenuItem> Bar charts</MenuItem>
+                  </SubMenu>
+                  <SubMenu icon={<GlobalOutlined />} label="Maps">
+                    <MenuItem> Google maps</MenuItem>
+                    <MenuItem> Open street maps</MenuItem>
+                  </SubMenu>
+                  <SubMenu icon={<BgColorsOutlined />} label="Theme">
+                    <MenuItem> Dark</MenuItem>
+                    <MenuItem> Light</MenuItem>
+                  </SubMenu>
+                  <SubMenu icon={<BgColorsOutlined />} label="Pages">
+                    <MenuItem> Page 1</MenuItem>
+                    <MenuItem> Page 2</MenuItem>
+                  </SubMenu>
+                </Menu>
               </Menu>
             </Sidebar>
-            ;
           </Sider>
           <Layout>
             <Header style={headerStyle}>Header</Header>
