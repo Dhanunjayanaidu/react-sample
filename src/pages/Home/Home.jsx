@@ -1,6 +1,9 @@
 import React from "react";
 import { Layout, Flex } from "antd";
+
+import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 const { Header, Footer, Sider, Content } = Layout;
+
 const headerStyle = {
   textAlign: "center",
   color: "#fff",
@@ -16,13 +19,13 @@ const contentStyle = {
   color: "#fff",
   backgroundColor: "#0958d9",
 };
-const siderStyle = {
-  textAlign: "center",
-  lineHeight: "120px",
-  color: "#fff",
-  backgroundColor: "#1677ff",
-  height: "100vh",
-};
+// const siderStyle = {
+//   textAlign: "center",
+//   lineHeight: "120px",
+//   color: "#fff",
+//   backgroundColor: "#1677ff",
+//   height: "100vh",
+// };
 const footerStyle = {
   textAlign: "center",
   color: "#fff",
@@ -40,8 +43,18 @@ function Home() {
     <>
       <Flex gap="middle" wrap="wrap">
         <Layout style={layoutStyle}>
-          <Sider width="16%" style={siderStyle}>
-            Sider
+          <Sider width="16%">
+            <Sidebar>
+              <Menu>
+                <SubMenu label="Charts">
+                  <MenuItem> Pie charts </MenuItem>
+                  <MenuItem> Line charts </MenuItem>
+                </SubMenu>
+                <MenuItem> Documentation </MenuItem>
+                <MenuItem> Calendar </MenuItem>
+              </Menu>
+            </Sidebar>
+            ;
           </Sider>
           <Layout>
             <Header style={headerStyle}>Header</Header>

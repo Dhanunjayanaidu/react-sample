@@ -1,0 +1,17 @@
+.LogoSet {
+  //   background-color: red;
+  height: 64px;
+  padding: 10px;
+  color: white;
+  border-bottom: solid 1px rgb(255 255 255 / 33%);
+
+  .ant-avatar {
+    background-color: white;
+    padding: 7px;
+    margin-right: 5px;
+  }
+  span {
+    font-size: medium;
+    font-weight: 600;
+  }
+}

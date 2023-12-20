@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Table, Avatar } from "antd";
 
 const DataTable = () => {
-  const [columns, setColumns] = useState([
+  const [columns] = useState([
     {
       title: "ID",
       dataIndex: "id",
       sorter: (a, b) => a.email.length - b.email.length,
       sortDirections: ["ascend", "descend"],
+      align: "center",
     },
     {
       title: "First Name",
@@ -27,12 +28,14 @@ const DataTable = () => {
       dataIndex: "age",
       sorter: (a, b) => a.age.length - b.age.length,
       sortDirections: ["ascend", "descend"],
+      align: "center",
     },
     {
       title: "Gender",
       dataIndex: "gender",
       sorter: (a, b) => a.gender.length - b.gender.length,
       sortDirections: ["ascend", "descend"],
+      align: "center",
     },
     {
       title: "Email",
@@ -46,36 +49,42 @@ const DataTable = () => {
       width: "10%",
       sorter: (a, b) => a.phone.length - b.phone.length,
       sortDirections: ["ascend", "descend"],
+      align: "center",
     },
     {
       title: "Birth Date",
       dataIndex: "birthDate",
       sorter: (a, b) => a.birthDate.length - b.birthDate.length,
       sortDirections: ["ascend", "descend"],
+      align: "center",
     },
     {
       title: "Blood Group",
       dataIndex: "bloodGroup",
       sorter: (a, b) => a.email.bloodGroup - b.bloodGroup.length,
       sortDirections: ["ascend", "descend"],
+      align: "center",
     },
     {
       title: "Height",
       dataIndex: "height",
       sorter: (a, b) => a.height.length - b.height.length,
       sortDirections: ["ascend", "descend"],
+      align: "center",
     },
     {
       title: "Weight",
       dataIndex: "weight",
       sorter: (a, b) => a.weight.length - b.weight.length,
       sortDirections: ["ascend", "descend"],
+      align: "center",
     },
     {
       title: "Eye Color",
       dataIndex: "eyeColor",
       sorter: (a, b) => a.eyeColor.length - b.eyeColor.length,
       sortDirections: ["ascend", "descend"],
+      align: "center",
     },
   ]);
   const [dataSource, setDataSource] = useState([]);
@@ -94,7 +103,7 @@ const DataTable = () => {
       className="dataTable"
       columns={columns}
       dataSource={dataSource}
-      size="middle"
+      size="small"
       scroll={{
         x: 1500,
       }}

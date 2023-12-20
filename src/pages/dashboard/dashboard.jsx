@@ -17,6 +17,7 @@ import {
 
 import DataTable from "../../components/DataTable/DataTable";
 import "./dashboard.scss";
+import Logo from "../../components/Logo/Logo";
 
 const { Header, Sider, Content } = Layout;
 
@@ -32,7 +33,8 @@ function Dashboard() {
           collapsible
           collapsed={collapsed}
         >
-          <div className="demo-logo-vertical" />
+          {/* <Logo className={collapsed ? LogoSet : LogoSetCollapsed} /> */}
+          <Logo />
           <Menu
             theme="dark"
             mode="inline"
@@ -91,7 +93,8 @@ function Dashboard() {
             ]}
           />
         </Sider>
-        <Layout>
+
+        <Layout className="right">
           <Header className="Header">
             <Button
               type="text"
