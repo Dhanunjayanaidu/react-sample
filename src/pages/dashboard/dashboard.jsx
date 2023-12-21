@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Layout, Menu, Button, Row, Col, Avatar, Input, Space } from "antd";
+import { Layout, Menu, Button, Row, Col, Avatar, Input } from "antd";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,

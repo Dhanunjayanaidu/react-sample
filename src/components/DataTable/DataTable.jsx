@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table, Avatar } from "antd";
-import { calc } from "antd/es/theme/internal";
+// import { calc } from "antd/es/theme/internal";
 
 const DataTable = () => {
   const [columns] = useState([
