@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table, Avatar } from "antd";
+import { calc } from "antd/es/theme/internal";
 
 const DataTable = () => {
   const [columns] = useState([
@@ -106,6 +107,7 @@ const DataTable = () => {
       size="small"
       scroll={{
         x: 1500,
+        // y: "calc(100vh - 193px)",
       }}
     />
   );

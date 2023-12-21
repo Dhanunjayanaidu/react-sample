@@ -4,11 +4,11 @@ import {
   ContainerOutlined,
   DesktopOutlined,
   MailOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
+  //   MenuFoldOutlined,
+  //   MenuUnfoldOutlined,
   PieChartOutlined,
 } from "@ant-design/icons";
-import { Button, Menu } from "antd";
+import { Menu } from "antd";
 function getItem(label, key, icon, children, type) {
   return {
     key,
@@ -59,7 +59,7 @@ const MenuSet = () => {
       </Button> */}
       <Menu
         defaultSelectedKeys={["1"]}
-        defaultOpenKeys={["sub1"]}
+        // defaultOpenKeys={["sub1"]}
         mode="inline"
         theme="dark"
         inlineCollapsed={collapsed}

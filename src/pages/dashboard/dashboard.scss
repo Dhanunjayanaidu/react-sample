@@ -71,15 +71,87 @@
   .Header {
     padding: 0px;
     background-color: #ffffff;
-    border-bottom: solid 1px #cccccc;
+    // border-bottom: solid 1px #cccccc;
     box-shadow: 0 0px 10px -5px;
-
     position: sticky;
     top: 0;
     z-index: 1;
     width: 100%;
     display: flex;
-    align-items: center;
+
+    .ant-row {
+      display: flex;
+      flex-flow: row wrap;
+      min-width: 0;
+      max-width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .left {
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .ant-btn {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 5px;
+        margin: 5px;
+        cursor: pointer;
+      }
+
+      .searchBar_header {
+        margin: 0 0 0 50px;
+        width: 350px;
+
+        .ant-input-affix-wrapper {
+          border-start-start-radius: 25px;
+          border-end-start-radius: 25px;
+          padding-left: 20px;
+        }
+        .ant-input-group-addon {
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px;
+          background: transparent;
+
+          .ant-btn {
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-left-color: white;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 50px;
+          }
+        }
+        .ant-btn {
+          background-color: inherit;
+          box-shadow: none;
+          margin: 0px;
+          cursor: pointer;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 20px;
+
+      .ant-btn {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 5px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .ant-avatar {
+        border-color: #ffffff;
+      }
+      .ant-btn-icon {
+        color: #858585;
+      }
+    }
   }
 
   .content_body {

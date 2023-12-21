@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Layout, Menu, Button } from "antd";
+import { Layout, Menu, Button, Row, Col, Avatar, Input, Space } from "antd";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -13,6 +13,11 @@ import {
   DiffOutlined,
   SettingOutlined,
   SlidersOutlined,
+  MenuOutlined,
+  CommentOutlined,
+  FullscreenOutlined,
+  BellOutlined,
+  FileProtectOutlined,
 } from "@ant-design/icons";
 
 import DataTable from "../../components/DataTable/DataTable";
@@ -21,6 +26,8 @@ import Logo from "../../components/Logo/Logo";
 import MenuSet from "../../components/Menu/Menu";
 
 const { Header, Sider, Content } = Layout;
+const { Search } = Input;
+const onSearch = (value, _e, info) => console.log(info?.source, value);
 
 function Dashboard() {
   const [collapsed, setCollapsed] = useState(false);
@@ -100,16 +107,78 @@ function Dashboard() {
 
         <Layout className="right">
           <Header className="Header">
-            <Button
-              type="text"
-              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-              onClick={() => setCollapsed(!collapsed)}
-              style={{
-                fontSize: "16px",
-                width: 64,
-                height: 64,
-              }}
-            />
+            <Row>
+              <Col span={15} className="left">
+                <Button
+                  type="text"
+                  shape="circle"
+                  icon={
+                    collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />
+                  }
+                  onClick={() => setCollapsed(!collapsed)}
+                  style={{
+                    fontSize: "16px",
+                    width: 44,
+                    height: 44,
+                  }}
+                />
+
+                <Search
+                  className="searchBar_header"
+                  placeholder="Search for results..."
+                  onSearch={onSearch}
+                  allowClear
+                  size="large"
+                />
+              </Col>
+              <Col span={9} className="right">
+                <Button
+                  type="text"
+                  shape="circle"
+                  size="large"
+                  icon={<FileProtectOutlined />}
+                />
+
+                <Button
+                  type="text"
+                  shape="circle"
+                  size="large"
+                  icon={<FullscreenOutlined />}
+                />
+                <Button
+                  type="text"
+                  shape="circle"
+                  size="large"
+                  icon={<BellOutlined />}
+                />
+
+                <Button
+                  type="text"
+                  shape="circle"
+                  size="large"
+                  icon={<CommentOutlined />}
+                />
+
+                <Avatar
+                  style={{ backgroundColor: "#f56a00", margin: "5px" }}
+                  size={40}
+                  gap={5}
+                  src="https://react.spruko.com/zanex/preview/assets/8-2282942f.jpg"
+                ></Avatar>
+                <Button
+                  type="text"
+                  shape="circle"
+                  size="large"
+                  icon={<MenuOutlined />}
+                />
+                <Button
+                  type="text"
+                  shape="circle"
+                  size="large"
+                  icon={<SettingOutlined />}
+                />
+              </Col>
+            </Row>
           </Header>
           <Content className="content_body">
             <DataTable />
