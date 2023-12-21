@@ -53,10 +53,16 @@ function Home() {
             <Sidebar>
               <Menu>
                 <MenuItem>General</MenuItem>
-                <MenuItem icon={<HomeOutlined />}> Dashboard</MenuItem>
+                <MenuItem key="/dashboard" icon={<HomeOutlined />}>
+                  {" "}
+                  Dashboard
+                </MenuItem>
 
                 <MenuItem>WIDGETS</MenuItem>
-                <MenuItem icon={<AppstoreOutlined />}> Widgets</MenuItem>
+                <MenuItem key="/home" icon={<AppstoreOutlined />}>
+                  {" "}
+                  Widgets
+                </MenuItem>
 
                 <MenuItem>Elements</MenuItem>
                 <SubMenu icon={<PieChartOutlined />} label="Components">

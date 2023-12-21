@@ -9,17 +9,26 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home/Home';
 import Dashboard from './pages/dashboard/dashboard';
+import DataTable from './components/DataTable/DataTable';
 
 const router = createBrowserRouter(
   [
     {
-      path: "/",
+      path: "/home",
       element: <Home/>,
     },
     {
       path: "/dashboard",
       element: <Dashboard />
-    }
+    },
+    {
+      path: "/option-five",
+      element: <div>Option five content</div>,
+    },
+    {
+      path: "/option-six",
+      element: <DataTable />,
+    },
   ]
 );
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   AppstoreOutlined,
   DatabaseOutlined,
@@ -10,10 +10,11 @@ import {
   MailOutlined,
   //   MenuFoldOutlined,
   //   MenuUnfoldOutlined,
-  PieChartOutlined,
-  SettingOutlined,
+  // PieChartOutlined,
+  // SettingOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
+import { useNavigate } from "react-router-dom";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -28,26 +29,26 @@ function getItem(label, key, icon, children, type) {
 const items = [
   getItem(
     "MAIN",
-    "grp",
+    "grp1",
     null,
-    [getItem("Dashboard", "15", <HomeOutlined />)],
+    [getItem("Dashboard", "/dashboard", <HomeOutlined />)],
     "group"
   ),
   getItem(
     "WIDGETS",
-    "grp",
+    "grp2",
     null,
-    [getItem("Widgets", "16", <AppstoreOutlined />)],
+    [getItem("Widgets", "/home", <AppstoreOutlined />)],
     "group"
   ),
   getItem(
     "ELEMENTS",
-    "grp",
+    "grp3",
     null,
     [
       getItem("Components", "sub2", <DatabaseOutlined />, [
-        getItem("Option 5", "5"),
-        getItem("Option 6", "6"),
+        getItem("Option 5", "/option-five"),
+        getItem("Option 6", "/option-six"),
         getItem("Submenu", "sub3", null, [
           getItem("Option 7", "7"),
           getItem("Option 8", "8"),
@@ -85,14 +86,15 @@ const items = [
 
   getItem(
     "PAGES",
-    "grp",
+    "grp5",
     null,
     [getItem("Pages", "13", <GiftOutlined />), getItem("Option 14", "14")],
     "group"
   ),
 ];
 const MenuSet = () => {
-  const [collapsed] = useState(false);
+  const navigate = useNavigate();
+  // const [collapsed] = useState(false);
   // const toggleCollapsed = () => {
   //   setCollapsed(!collapsed);
   // };
@@ -118,6 +120,15 @@ const MenuSet = () => {
         theme="dark"
         // inlineCollapsed={collapsed}
         items={items}
+        // onClick={(info) => {
+        //   console.log(info.key);
+        // }}
+        onClick={({ key }) => {
+          if (key === "/") {
+          } else {
+            navigate(key);
+          }
+        }}
       />
     </div>
   );
