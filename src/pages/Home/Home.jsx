@@ -52,50 +52,48 @@ function Home() {
           <Sider width="auto">
             <Sidebar>
               <Menu>
-                <Menu>
-                  <MenuItem>General</MenuItem>
-                  <MenuItem icon={<HomeOutlined />}> Dashboard</MenuItem>
+                <MenuItem>General</MenuItem>
+                <MenuItem icon={<HomeOutlined />}> Dashboard</MenuItem>
 
-                  <MenuItem>WIDGETS</MenuItem>
-                  <MenuItem icon={<AppstoreOutlined />}> Widgets</MenuItem>
+                <MenuItem>WIDGETS</MenuItem>
+                <MenuItem icon={<AppstoreOutlined />}> Widgets</MenuItem>
 
-                  <MenuItem>Elements</MenuItem>
-                  <SubMenu icon={<PieChartOutlined />} label="Components">
-                    <MenuItem> Level 1 Submenu</MenuItem>
-                    <MenuItem> Level 1 Submenu</MenuItem>
-                    <MenuItem> Level 1 Submenu</MenuItem>
-                  </SubMenu>
-                  <SubMenu icon={<GlobalOutlined />} label="Elements">
-                    <MenuItem> Level 1 Submenu</MenuItem>
-                    <MenuItem> Level 1 Submenu</MenuItem>
-                  </SubMenu>
-                  <SubMenu
-                    icon={<BgColorsOutlined />}
-                    label="Advanced Components"
-                  >
-                    <MenuItem> Advanced Components 1</MenuItem>
-                    <MenuItem> Advanced Components 2</MenuItem>
-                  </SubMenu>
+                <MenuItem>Elements</MenuItem>
+                <SubMenu icon={<PieChartOutlined />} label="Components">
+                  <MenuItem> Level 1 Submenu</MenuItem>
+                  <MenuItem> Level 1 Submenu</MenuItem>
+                  <MenuItem> Level 1 Submenu</MenuItem>
+                </SubMenu>
+                <SubMenu icon={<GlobalOutlined />} label="Elements">
+                  <MenuItem> Level 1 Submenu</MenuItem>
+                  <MenuItem> Level 1 Submenu</MenuItem>
+                </SubMenu>
+                <SubMenu
+                  icon={<BgColorsOutlined />}
+                  label="Advanced Components"
+                >
+                  <MenuItem> Advanced Components 1</MenuItem>
+                  <MenuItem> Advanced Components 2</MenuItem>
+                </SubMenu>
 
-                  <MenuItem>Charts & Tables</MenuItem>
-                  <SubMenu icon={<PieChartOutlined />} label="Charts">
-                    <MenuItem> Pie charts</MenuItem>
-                    <MenuItem> Line charts</MenuItem>
-                    <MenuItem> Bar charts</MenuItem>
-                  </SubMenu>
-                  <SubMenu icon={<GlobalOutlined />} label="Maps">
-                    <MenuItem> Google maps</MenuItem>
-                    <MenuItem> Open street maps</MenuItem>
-                  </SubMenu>
-                  <SubMenu icon={<BgColorsOutlined />} label="Theme">
-                    <MenuItem> Dark</MenuItem>
-                    <MenuItem> Light</MenuItem>
-                  </SubMenu>
-                  <SubMenu icon={<BgColorsOutlined />} label="Pages">
-                    <MenuItem> Page 1</MenuItem>
-                    <MenuItem> Page 2</MenuItem>
-                  </SubMenu>
-                </Menu>
+                <MenuItem>Charts & Tables</MenuItem>
+                <SubMenu icon={<PieChartOutlined />} label="Charts">
+                  <MenuItem> Pie charts</MenuItem>
+                  <MenuItem> Line charts</MenuItem>
+                  <MenuItem> Bar charts</MenuItem>
+                </SubMenu>
+                <SubMenu icon={<GlobalOutlined />} label="Maps">
+                  <MenuItem> Google maps</MenuItem>
+                  <MenuItem> Open street maps</MenuItem>
+                </SubMenu>
+                <SubMenu icon={<BgColorsOutlined />} label="Theme">
+                  <MenuItem> Dark</MenuItem>
+                  <MenuItem> Light</MenuItem>
+                </SubMenu>
+                <SubMenu icon={<BgColorsOutlined />} label="Pages">
+                  <MenuItem> Page 1</MenuItem>
+                  <MenuItem> Page 2</MenuItem>
+                </SubMenu>
               </Menu>
             </Sidebar>
           </Sider>

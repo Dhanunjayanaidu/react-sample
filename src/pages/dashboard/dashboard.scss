@@ -13,14 +13,48 @@
   }
 
   .ant-layout-sider.sidebar {
+    .LogoSet {
+      .ant-menu {
+        margin-top: 0px;
+        background-color: transparent;
+
+        .ant-menu-item {
+          height: 64px;
+          margin: 0px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
+        .ant-menu-item-selected {
+          background-color: transparent;
+          :active {
+            background-color: transparent;
+          }
+        }
+      }
+    }
     .LogoSet span:nth-child(2) {
       display: inline-block;
       transition-property: display;
-      transition-duration: 2s;
-      transition-delay: 2s;
+      transition-duration: 3s;
+      transition-delay: 3s;
+      color: #87cdff;
     }
   }
   .ant-layout-sider-collapsed.sidebar {
+    .LogoSet {
+      .ant-menu {
+        .ant-menu-item {
+          padding: initial;
+          :active {
+            background-color: transparent;
+          }
+        }
+        .ant-menu-item-selected {
+          background-color: transparent;
+        }
+      }
+    }
     .LogoSet span {
       text-align: center;
       margin: auto;
@@ -29,16 +63,23 @@
     .LogoSet span:nth-child(2) {
       display: none;
       transition-property: display;
-      transition-duration: 2s;
-      transition-delay: 2s;
+      transition-duration: 3s;
+      transition-delay: 3s;
     }
   }
 
   .Header {
     padding: 0px;
-    background-color: white;
+    background-color: #ffffff;
     border-bottom: solid 1px #cccccc;
     box-shadow: 0 0px 10px -5px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .content_body {

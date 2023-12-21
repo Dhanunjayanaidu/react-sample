@@ -18,6 +18,7 @@ import {
 import DataTable from "../../components/DataTable/DataTable";
 import "./dashboard.scss";
 import Logo from "../../components/Logo/Logo";
+import MenuSet from "../../components/Menu/Menu";
 
 const { Header, Sider, Content } = Layout;
 
@@ -36,6 +37,7 @@ function Dashboard() {
           {/* <Logo className={collapsed ? LogoSet : LogoSetCollapsed} /> */}
           <Logo />
           <Menu
+            style={{ display: "none" }}
             theme="dark"
             mode="inline"
             defaultSelectedKeys={["1"]}
@@ -92,6 +94,8 @@ function Dashboard() {
               },
             ]}
           />
+
+          <MenuSet />
         </Sider>
 
         <Layout className="right">
