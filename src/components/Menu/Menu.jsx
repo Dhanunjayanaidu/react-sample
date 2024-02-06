@@ -15,6 +15,7 @@ import {
 } from "@ant-design/icons";
 import { Menu } from "antd";
 import { useNavigate } from "react-router-dom";
+import "./Menu.scss";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -100,9 +101,10 @@ const MenuSet = () => {
   // };
   return (
     <div
-    //   style={{
-    //     width: 256,
-    //   }}
+      className="menuSet"
+      //   style={{
+      //     width: 256,
+      //   }}
     >
       {/* <Button
         type="primary"
